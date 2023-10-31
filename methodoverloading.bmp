@@ -1,0 +1,15 @@
+METHOD OVERLOADING
+
+
+Method overloading in Python is the ability of a class to define multiple methods with the same name but different parameters. 
+
+1. Achieve the method overloading in the way of default parameter concept.
+
+def add(a, b=None):
+    if b is None:
+        return a
+    else:
+        return a + b
+
+print(add(1)) # 1
+print(add(1, 2)) # 3
