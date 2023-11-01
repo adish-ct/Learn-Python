@@ -1,0 +1,29 @@
+GENERATOR
+
+Generator is a special function in python, that returns iterator. An iterator is an object that can be iterated over iterable(like list, tuple), meaning that you can travense through its elements one at a time.
+Generators are created using the 'yield' keyword. The 'yield' keyword returns the value and take a pause, it memmorize the value and returns the next value if we execute the fuction again untill it reaches the end.
+
+
+li = [1, 2, 3, 4, 5]
+def gen():
+   for i in li:
+      yield i
+
+a = gen() # it will an iterator object, it will show the object address
+print(a.__next__()) # it will return 1 st element
+print(a.__next__()) # it will return 2nd element and go on.
+
+
+def generate_numbers(start, end):
+    while start <= end:
+        yield start
+        start += 1
+
+# Create a generator object
+generator = generate_numbers(1, 10)
+
+# Iterate over the generator object
+for number in generator:
+    print(number)
+
+
