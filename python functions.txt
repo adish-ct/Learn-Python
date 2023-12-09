@@ -2,3 +2,5 @@
 2   enumerate()
 3   map()
 4   zip()
+5   all()
+6   divmod()
