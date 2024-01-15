@@ -1,6 +1,9 @@
 """ Sort based on length of string """
 
-strings = ['hello', 'hey', 'to', 'application']
+strings = ['hello', 'zey', 'to', 'application']
+
+print(sorted(strings, key=len))
+
 
 # This is one way to sort
 print(sorted(strings, key=len))
@@ -19,4 +22,23 @@ while i < len(strings):
     i += 1
 
 print(strings)
+
+
+value = ['i1', 'kannur4', 'am2', 'from3']
+
+for i in range(len(value)):
+    value[i] = value[i][::-1]
+
+
+print(value)
+
+value = sorted(value)
+
+result = ""
+for i in range(len(value)):
+    value[i] = value[i][1:][::-1]
+    result += value[i] + " "
+
+print(value)
+print(result)
 
