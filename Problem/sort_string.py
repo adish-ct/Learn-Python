@@ -30,15 +30,23 @@ for i in range(len(value)):
     value[i] = value[i][::-1]
 
 
-print(value)
-
 value = sorted(value)
+
+# using list comprehension
+new_list = " ".join([val[1:][::-1] for val in value])
+print(new_list)
 
 result = ""
 for i in range(len(value)):
     value[i] = value[i][1:][::-1]
     result += value[i] + " "
 
+new_result = " ".join(value)
+
 print(value)
 print(result)
+print(new_result)
+
+
+
 
