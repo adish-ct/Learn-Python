@@ -1,0 +1,97 @@
+INHERITENCE
+
+Inheritance in Python is a powerful feature that allows you to reuse code and create more complex object hierarchies. It is one of the core concepts of object-oriented programming (OOP).
+
+Inheritance works by allowing you to create a new class that inherits the properties and behaviors of an existing class. The new class is called a subclass, and the existing class is called a superclass.
+
+class Animal:
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    pass
+
+
+Type of inheritance
+
+1. Single Inheritance
+	This is the most common type of inheritance, where a subclass inherits from only one superclass.
+
+2. Multiple Ingeritance
+	This is a type of inheritance where a subclass inherits from multiple superclasses. 
+
+	class Dog:
+   		 pass
+
+	class SmartDog:
+  		  pass
+
+	class Poodle(Dog, SmartDog):
+   		 pass
+
+
+3. Multilevel Inheritance
+	This is a type of inheritance where a subclass inherits from another subclass, which in turn inherits from another subclass, and 	so on.
+	
+	class Dog:
+    		pass
+
+	class SmartDog:
+    		pass
+
+	class Poodle(Dog, SmartDog):
+    		pass
+
+	class MiniaturePoodle(Poodle):
+    		pass
+
+4. Hirarichal Inheritance
+	This is a type of inheritance where multiple subclasses inherit from the same superclass.
+	
+	class Animal:
+    		pass
+
+	class Dog(Animal):
+    		pass
+
+	class Cat(Animal):
+    		pass
+
+5. Hybrid Inheritance
+	This is a type of inheritance that combines multiple types of inheritance.
+
+	class Animal:
+    		pass
+
+	class Dog(Animal):
+    		pass
+
+	class SmartDog(Animal):
+    		pass
+
+	class Poodle(Dog, SmartDog):
+    		pass
+
+How python supports multiple inheritance.
+
+	Python supports multiple inheritance by using a method resolution order (MRO). The MRO is a list of classes that Python searches 	in order to find the appropriate method to call when a method is called on a class. The MRO is determined by the order in which 	the superclasses are listed in the class definition.
+
+	class Dog:
+   		 def make_sound(self):
+        print("Woof!")
+
+	class SmartDog:
+    		def make_sound(self):
+        		print("I'm a smart dog!")
+
+	class Poodle(Dog, SmartDog):
+    		pass
+
+	MRO for Poodle class [Poodle, Dog, SmartDog].
+
+	Use multiple inheritance only when you need to reuse code from multiple superclasses.
+
+	Be careful not to create diamond inheritance hierarchies, where a subclass inherits from two superclasses that both inherit from 	the same superclass. Diamond inheritance hierarchies can lead to ambiguity about which method should be called when a method is 	called on the subclass.
+
+	Use the super() keyword to call methods in the superclasses. The super() keyword takes care of resolving the MRO for you.
+

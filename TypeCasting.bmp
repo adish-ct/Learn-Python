@@ -1,0 +1,22 @@
+TYPE CASTING 
+
+Type casting in python is the process of converting data type from one to another, for example data type of a variable int converted into float.
+
+Types.
+	1. Implicit Type Casting
+	2. Explicit Type Casting
+
+Implicit Type Casting:
+	It performs by the python intrepreter it self. If you are adding two integers python will convert it to float before the addition.
+	
+	a = 10		int
+	b = 10.5	float
+	c = a + b	float - intrepreter will automatically convert this
+
+Explicit Type Casting:
+	It performs by the user, using built-in methods to convert the data type of a data. str(), int(), list(), tuple(), set() etc.
+	
+	a = "10"	string
+	b = 20		int
+	c = int(a)	int
+	d = str(b)	string

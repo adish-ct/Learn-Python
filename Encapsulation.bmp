@@ -1,0 +1,48 @@
+ENCAPSULATION
+
+It is the Python process of wrapping data and code (data and method) into a single unit, called a class. This makes it easier to protect the  data from being accidentally modified or corrupted.
+To encapsulate data, we can use private class attributes. __ prefixed double underscore make an attribute private.
+
+class
+ 
+BankAccount:
+
+    
+def
+ 
+__init__(self, name, balance):
+        self.__name = name
+        self.__balance = balance
+
+    def
+ 
+get_name(self):
+
+        
+return self.__name
+
+    def
+ 
+get_balance(self):
+
+        
+return self.__balance
+
+    def
+ 
+deposit(self, amount):
+        self.__balance += amount
+
+    def
+ 
+withdraw(self, amount):
+        self.__balance -= amount
+
+
+
+# create an instance for the class BankAccount
+
+user = BankAccount('adish', 2000)
+
+print(user.name) # it will raise an error because name is private you can't access it directly.
+print(user.get_name()) # it will return the name we used get_name() method to access the data, data is binding with the method.
